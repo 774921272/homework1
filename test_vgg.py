@@ -16,11 +16,11 @@ def recognize(jpg_path, pb_file_path):
             sess.run(init)
 
             input_x = sess.graph.get_tensor_by_name("input:0")
-            print input_x
+            print(input_x)
             out_softmax = sess.graph.get_tensor_by_name("softmax:0")
-            print out_softmax
+            print(out_softmax)
             out_label = sess.graph.get_tensor_by_name("output:0")
-            print out_label
+            print(out_label)
 
             img = io.imread(jpg_path)
             img = transform.resize(img, (224, 224, 3))
